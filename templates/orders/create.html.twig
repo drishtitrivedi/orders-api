@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %} {% block title %}Hello OrdersController!{%
+endblock %} {% block body %}
+<style>
+  .wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+  }
+</style>
+
+<div class="wrapper">
+  <h2>Consumer Service</h2>
+
+  {{ form(form) }}
+
+  {% if response_object is defined %}
+   <legend>Response:</legend>
+   Status Code
+    <textarea class="form-control" rows="1" disabled>
+    {{ response_object.statusCode }}
+    </textarea> 
+  Content Type
+    <textarea class="form-control" rows="1" disabled>
+    {{ response_object.contentType }}
+    </textarea> 
+   Response Data
+    <textarea class="form-control" rows="10" disabled>
+    {{ response_object.content }}
+    </textarea> 
+
+  {% endif %}
+</div>
+
+{% endblock %}

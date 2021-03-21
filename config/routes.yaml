@@ -1,0 +1,33 @@
+index:
+  path: /
+  controller: App\Controller\OrdersController::index
+
+create:
+  path: /create
+  controller: App\Controller\OrdersController::create
+
+edit:
+  path: edit/{id}
+  controller: App\Controller\OrdersController::edit
+
+remove:
+  path: remove/{id}
+  controller: App\Controller\OrdersController::remove
+
+search:
+  path: search
+  controller: App\Controller\OrdersController::search
+
+restapi:
+  path: restapi
+  controller: App\Controller\RESTApiController::restapi
+
+# api_post_show:
+#     path:       /api/posts/{id}
+#     controller: App\Controller\BlogApiController::show
+#     methods:    GET|HEAD
+
+# api_post_edit:
+#     path:       /api/posts/{id}
+#     controller: App\Controller\BlogApiController::edit
+#     methods:    PUT

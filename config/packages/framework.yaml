@@ -1,0 +1,29 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+    #csrf_protection: true
+    #http_method_override: true
+
+    # Enables session support. Note that the session will ONLY be started if you read or write from it.
+    # Remove or comment this section to explicitly disable session support.
+    session:
+        handler_id: null
+        cookie_secure: auto
+        cookie_samesite: lax
+
+    #esi: true
+    #fragments: true
+    php_errors:
+        log: true
+    
+    http_client:
+        # ...
+        retry_failed:
+            # only retry errors with these HTTP codes
+            http_codes: [423, 425, 429, 500, 502, 503, 504, 507, 510]
+            max_retries: 10
+            # waiting time between retries (in milliseconds)
+            delay: 1000
+            # if set, the waiting time of each retry increases by this factor
+            # (e.g. first retry: 1000ms; second retry: 3 * 1000ms; etc.)
+            multiplier: 3
