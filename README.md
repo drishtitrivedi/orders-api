@@ -4,7 +4,7 @@
 
 In the project directory, you can run in your treminal:
 ```
-`php -S localhost:8000`
+php -S localhost:8000
 ```
 
 Runs the consumer/client app in the development mode.<br />
@@ -14,7 +14,7 @@ You will see any errors in the treminal.
 
 ### Start API server
 ```
-`php -S localhost:8001`
+php -S localhost:8001
 ```
 
 Launches the API service at http://localhost:8001/public/api/order.<br />
